@@ -1,0 +1,28 @@
+<div class="event-list-container">
+  <h2>📅 Lista de Eventos</h2>
+
+  <p-table [value]="events" responsiveLayout="scroll" class="custom-table">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Titulo</th>
+        <th>Descripcion</th>
+        <th>Ubicación</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-event> 
+      <tr>
+        <td>{{ event.titleEvent }}</td>
+        <td>{{ event.descriptionEvent }}</td>
+        <td>{{ event.locationEvent }}</td>
+        <td>{{ event.dateEvent }}</td>
+        
+        <td>
+          <p-button icon="pi pi-eye" class="p-button-rounded p-button-info"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

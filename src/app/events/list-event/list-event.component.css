@@ -1,0 +1,30 @@
+.event-list-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px ;
+  }
+  
+  h2 {
+    color: #8E66B8;
+    margin-bottom: 20px;
+  }
+  
+  .event-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  
+  .custom-table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .p-button {
+    font-size: 14px;
+  }

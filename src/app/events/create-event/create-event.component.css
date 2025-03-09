@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  .form-card {
+    width: 400px;
+    padding: 20px;
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    width: 100%;
+  }
+  .custom-button {
+    background-color: #3700B3 !important;
+    border-color: #3700B3 !important;
+    color: white !important;
+  }
+  
+  

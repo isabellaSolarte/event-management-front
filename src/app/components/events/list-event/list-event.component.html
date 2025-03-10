@@ -17,7 +17,7 @@
         <td>{{ event.titleEvent }}</td>
         <td>{{ event.descriptionEvent }}</td>
         <td>{{ event.locationEvent }}</td>
-        <td>{{ event.dateEvent }}</td>
+        <td>{{ event.dateEvent | date:'dd/MM/yyyy' }}</td>
 
         <td>
           <p-button

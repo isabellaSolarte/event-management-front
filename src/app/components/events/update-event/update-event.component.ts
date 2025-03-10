@@ -75,7 +75,7 @@ export class UpdateEventComponent implements OnInit {
             showConfirmButton: false,
             timer: 1500,
           });
-          this.goBack;
+          this.goBack();
         },
         error: (error) => {
           Swal.fire({

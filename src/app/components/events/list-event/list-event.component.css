@@ -134,3 +134,15 @@
 :host ::ng-deep .custom-table .p-datatable-tbody > tr > td:first-child {
   font-weight: 500;
 }
+
+.no-events-message {
+  text-align: center;
+  font-size: 18px;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+

@@ -1,7 +1,13 @@
 <div class="event-list-container">
   <h2>📅 Lista de Eventos</h2>
 
-  <p-table [value]="events" responsiveLayout="scroll" class="custom-table">
+  <!-- Mostrar mensaje cuando no hay eventos -->
+  <div *ngIf="events.length === 0" class="no-events-message">
+    <p>🚀 No hay eventos registrados. ¡Crea uno nuevo! 🎉</p>
+  </div>
+
+  <!-- Tabla de eventos cuando hay eventos -->
+  <p-table *ngIf="events.length > 0" [value]="events" responsiveLayout="scroll" class="custom-table">
     <ng-template pTemplate="header">
       <tr>
         <th>Título</th>
@@ -35,4 +41,5 @@
     </ng-template>
   </p-table>
 </div>
+
 <app-button-create-event></app-button-create-event>

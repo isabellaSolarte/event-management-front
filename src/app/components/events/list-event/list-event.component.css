@@ -1,0 +1,136 @@
+.event-list-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Título de la lista */
+.event-list-container h2 {
+  color: #3700b3;
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.8rem;
+}
+
+/* Estilos para la tabla */
+:host ::ng-deep .custom-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezados de tabla */
+:host ::ng-deep .custom-table .p-datatable-thead > tr > th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 2px solid #e9ecef;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Filas de datos */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td {
+  padding: 1rem;
+  border-bottom: 1px solid #f2f2f2;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* Hover sobre filas */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr:hover {
+  background-color: #f8f9ff;
+  transition: background-color 0.2s;
+}
+
+/* Columna de fecha */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td:nth-child(4) {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+/* Columna de acciones */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td:last-child {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Botones de acción */
+:host ::ng-deep .p-button.p-button-rounded {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efectos hover para botones */
+:host ::ng-deep .p-button.p-button-rounded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores específicos para los botones */
+:host ::ng-deep .p-button.p-button-info {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+:host ::ng-deep .p-button.p-button-warning {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+:host ::ng-deep .p-button.p-button-danger {
+  background-color: #ef4444;
+  border-color: #ef4444;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  .event-list-container {
+    padding: 1rem;
+  }
+
+  :host ::ng-deep .custom-table .p-datatable-tbody > tr > td:last-child {
+    flex-wrap: wrap;
+  }
+
+  :host ::ng-deep .custom-table .p-datatable-thead > tr > th,
+  :host ::ng-deep .custom-table .p-datatable-tbody > tr > td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Celdas con texto largo */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td:nth-child(2) {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Filas alternas */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Tamaño de fuentes en los datos */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td {
+  font-size: 0.95rem;
+}
+
+/* Título en negrita */
+:host ::ng-deep .custom-table .p-datatable-tbody > tr > td:first-child {
+  font-weight: 500;
+}

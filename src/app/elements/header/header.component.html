@@ -1,7 +1,15 @@
 <p-menubar [model]="menuItems" class="custom-header">
-    <ng-template pTemplate="start">
-      <img src="assets/calendar.png" alt="Logo" class="logo-img" />
-    </ng-template>
-    <p-chip label="Isabella" image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" alt="Avatar image" />
+  <ng-template pTemplate="start">
+    <img src="assets/calendar.png" alt="Logo" class="logo-img" />
+  </ng-template>
+
+  <p-button
+    label="Logout"
+    icon="pi pi-user"
+    [rounded]="true"
+    [text]="true"
+    [raised]="true"
+    severity="danger"
+    (onClick)="logout()"
+  />
 </p-menubar>
-  

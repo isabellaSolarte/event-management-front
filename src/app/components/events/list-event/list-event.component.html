@@ -4,25 +4,35 @@
   <p-table [value]="events" responsiveLayout="scroll" class="custom-table">
     <ng-template pTemplate="header">
       <tr>
-        <th>Titulo</th>
-        <th>Descripcion</th>
+        <th>Título</th>
+        <th>Descripción</th>
         <th>Ubicación</th>
         <th>Fecha</th>
         <th>Acciones</th>
       </tr>
     </ng-template>
 
-    <ng-template pTemplate="body" let-event> 
+    <ng-template pTemplate="body" let-event>
       <tr>
         <td>{{ event.titleEvent }}</td>
         <td>{{ event.descriptionEvent }}</td>
         <td>{{ event.locationEvent }}</td>
         <td>{{ event.dateEvent }}</td>
-        
+
         <td>
-          <p-button icon="pi pi-eye" class="p-button-rounded p-button-info"></p-button>
+          <p-button
+            icon="pi pi-pencil"
+            class="p-button-rounded p-button-warning"
+            (onClick)="goToEditEvent(event)"
+          ></p-button>
+          <p-button
+            icon="pi pi-trash"
+            class="p-button-rounded p-button-danger"
+            (onClick)="deleteEvent(event)"
+          ></p-button>
         </td>
       </tr>
     </ng-template>
   </p-table>
 </div>
+<app-button-create-event></app-button-create-event>

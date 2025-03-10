@@ -1,0 +1,60 @@
+<div class="login-container">
+  <div class="login-left">
+    <h2>Ingreso</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nombre de usuario</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          placeholder="test@atheros.ai"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('name') }"
+        />
+        <div *ngIf="isFieldInvalid('name')" class="error-message">
+          <small *ngIf="loginForm.get('name')?.errors?.['required']">
+            El nombre de usuario es requerido.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="******"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('password') }"
+        />
+        <div *ngIf="isFieldInvalid('password')" class="error-message">
+          <small *ngIf="loginForm.get('password')?.errors?.['required']">
+            La contraseña es requerida.
+          </small>
+          <small *ngIf="loginForm.get('password')?.errors?.['minlength']">
+            La contraseña debe tener al menos 6 caracteres.
+          </small>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-signin"
+        [disabled]="loginForm.invalid"
+      >
+        Ingresar
+      </button>
+    </form>
+    <p>¿No tienes cuenta? <a href="/register">Registrate ahora</a></p>
+  </div>
+  <div class="login-right">
+    <div class="login-info">
+      <h3>Gestión de Eventos</h3>
+      <p>
+        Con nuestra plataforma podrás gestionar tus eventos de manera sencilla y
+        rápida.
+      </p>
+      <img src="assets/monitoreo.png" alt="Login example" />
+    </div>
+  </div>
+</div>

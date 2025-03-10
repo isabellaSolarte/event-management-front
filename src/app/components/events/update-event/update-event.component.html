@@ -1,0 +1,116 @@
+<div class="form-container">
+  <p-card header="Actualización de Evento" class="form-card">
+    <form [formGroup]="updateEventForm" (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input
+          pInputText
+          id="name"
+          formControlName="name"
+          placeholder="Ingrese el nombre del evento"
+          [ngClass]="{
+            'ng-invalid ng-touched':
+              updateEventForm.controls['name'].invalid &&
+              updateEventForm.controls['name'].touched
+          }"
+        />
+        <p-message
+          *ngIf="
+            updateEventForm.controls['name']?.invalid &&
+            updateEventForm.controls['name']?.touched
+          "
+          severity="error"
+          text="El nombre es requerido."
+        ></p-message>
+      </div>
+
+      <!-- Descripción -->
+      <div class="field">
+        <label for="description">Descripción</label>
+        <input
+          pInputText
+          id="description"
+          formControlName="description"
+          placeholder="Ingrese la descripción"
+          [ngClass]="{
+            'ng-invalid ng-touched':
+              updateEventForm.controls['description'].invalid &&
+              updateEventForm.controls['description'].touched
+          }"
+        />
+        <p-message
+          *ngIf="
+            updateEventForm.controls['description']?.invalid &&
+            updateEventForm.controls['description']?.touched
+          "
+          severity="error"
+          text="La descripción es requerida."
+        ></p-message>
+      </div>
+
+      <!-- Fecha -->
+      <div class="field">
+        <label for="date">Fecha</label>
+        <input
+          pInputText
+          id="date"
+          formControlName="date"
+          type="date"
+          [ngClass]="{
+            'ng-invalid ng-touched':
+              updateEventForm.controls['date'].invalid &&
+              updateEventForm.controls['date'].touched
+          }"
+        />
+        <p-message
+          *ngIf="
+            updateEventForm.controls['date']?.invalid &&
+            updateEventForm.controls['date']?.touched
+          "
+          severity="error"
+          text="La fecha es requerida."
+        ></p-message>
+      </div>
+
+      <!-- Ubicación -->
+      <div class="field">
+        <label for="location">Ubicación</label>
+        <input
+          pInputText
+          id="location"
+          formControlName="location"
+          placeholder="Ingrese la ubicación"
+          [ngClass]="{
+            'ng-invalid ng-touched':
+              updateEventForm.controls['location'].invalid &&
+              updateEventForm.controls['location'].touched
+          }"
+        />
+        <p-message
+          *ngIf="
+            updateEventForm.controls['location']?.invalid &&
+            updateEventForm.controls['location']?.touched
+          "
+          severity="error"
+          text="La ubicación es requerida."
+        ></p-message>
+      </div>
+
+      <!-- Botones -->
+      <div class="button-container">
+        <p-button
+          type="button"
+          label="Volver"
+          styleClass="p-button-secondary"
+          (click)="goBack()"
+        ></p-button>
+        <p-button
+          type="submit"
+          label="Actualizar"
+          [disabled]="updateEventForm.invalid"
+        ></p-button>
+      </div>
+    </form>
+  </p-card>
+</div>

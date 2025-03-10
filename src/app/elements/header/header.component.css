@@ -1,5 +1,5 @@
 .custom-header {
-  background-color: #8E66B8 !important;
+  background-color: #8e66b8 !important;
   border-radius: 0;
   color: white;
   font-weight: bold;
@@ -8,17 +8,17 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #3700B3;
+  color: #3700b3;
   margin-right: 20px;
 }
 
 .login-button {
-  background-color: #6A40A5 !important;
+  background-color: #6a40a5 !important;
   border: none;
   color: white;
 }
 .logo-img {
-  width: 50px;  /* Ajusta el tamaño según necesites */
+  width: 50px; /* Ajusta el tamaño según necesites */
   height: 50px;
   margin-right: 10px;
   margin-left: 50px;
